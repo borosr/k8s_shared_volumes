@@ -1,15 +1,15 @@
 version: '3'
 
 services: 
-  api:
+  writer:
     build: .
     image: borosr/k8s_api
     ports: 
       - "3000:3000"
 
-  sys_monitor:
-    image: google/cadvisor
-    volumes: 
-      - root:/rootfs
-    ports:
-      - "8080:8080"
+  # sys_monitor:
+  #   image: google/cadvisor
+  #   volumes: 
+  #     - root:/rootfs
+  #   ports:
+  #     - "8080:8080"
